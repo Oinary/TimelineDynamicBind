@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using System;
 using Sirenix.OdinInspector;
@@ -9,7 +9,8 @@ using System.Linq;
 using UnityEngine.Playables;
 
 /// <summary>
-/// 
+/// このサンプルはタイムライン上に共通のVirtualCameraを追加する場合のものです。
+/// TimelineDynamicBindで共通オブジェクトを追加し、タイムラインクリップを個別に保持しているクラスはVcamDynamicBindで追加するものを登録します。
 /// </summary>
 internal class TimelineDynamicBind : SerializedMonoBehaviour, IDynamicBindReference<CinemachineVirtualCamera>
 {
