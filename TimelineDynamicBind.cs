@@ -23,9 +23,7 @@ internal class TimelineDynamicBind : SerializedMonoBehaviour, IDynamicBindRefere
         foreach (var item in RefData)
         {
             TrackAsset track = item.Timeline.GetOutputTracks().FirstOrDefault(x => x.name == item.TrackName);
-            Debug.Log(track);
             TimelineClip clip = track.GetClips().FirstOrDefault(x => x.displayName == item.ClipName);
-            Debug.Log(clip);
             var VcamClip = clip.asset as CinemachineShot;
             director.SetReferenceValue(VcamClip.VirtualCamera.exposedName, _BindTable[item.ListKey]);
         }
